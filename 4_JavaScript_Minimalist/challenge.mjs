@@ -1,5 +1,1 @@
-export {weightedSort};
-
-const weightedSort = (text) => {
-  return '';
-}
+export{weightedSort};const weightedSort=e=>{const t=e=>e.charCodeAt(),o=e.replace(/[^\w ]/g,"").split(" ").filter(Boolean);return[...new Set(o)].map(e=>[e,(e=>e.reduce((e,t)=>e+t,0))(e.split("").reduce((e,o)=>(e.push(t(o)),e),[]))]).sort((e,o)=>e[1]>o[1]?-1:e[1]<o[1]?1:((e,o)=>t(e[0][0])>t(o[0][0])?-1:t(e[0][0])<t(o[0][0])?1:o[0].localeCompare(e[0]))(e,o)).map(e=>e.join("|")).join("\n")};
